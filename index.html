@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>😈</title>
+
+<style>
+body {
+    margin:0;
+    background:black;
+    color:red;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial;
+}
+h1 {
+    font-size:6vw;
+}
+</style>
+</head>
+
+<body>
+
+<h1 id="txt"></h1>
+
+<script>
+function ejecutar() {
+    const mensajes = [
+        "💀 TE HA HACKEADO PXTERR 💀",
+        "⚠️ ERROR CRÍTICO ⚠️",
+        "💻 ACCESO DENEGADO 💻",
+        "😈 SISTEMA COMPROMETIDO 😈"
+    ];
+
+    let i = 0;
+
+    // Loop ultra rápido
+    let loop = setInterval(() => {
+        document.body.innerHTML = "<h1>" + mensajes[i] + "</h1>";
+        document.body.style.background =
+            document.body.style.background === "black" ? "#100" : "black";
+
+        i = (i + 1) % mensajes.length;
+    }, 30);
+
+    // Reinicio total cada poco tiempo
+    setTimeout(() => {
+        clearInterval(loop);
+        ejecutar(); // 🔥 vuelve a ejecutar TODO
+    }, 500);
+}
+
+// inicia
+ejecutar();
+
+// fullscreen
+document.onclick = () => {
+    document.documentElement.requestFullscreen();
+};
+</script>
+
+</body>
+</html>
